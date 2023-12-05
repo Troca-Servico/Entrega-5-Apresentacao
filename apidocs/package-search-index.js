@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.mycompany.trocadeservicos"},{"l":"com.mycompany.trocadeservicos.controller"},{"l":"com.mycompany.trocadeservicos.db"},{"l":"com.mycompany.trocadeservicos.model"},{"l":"com.mycompany.trocadeservicos.view"}];updateSearchResults();
