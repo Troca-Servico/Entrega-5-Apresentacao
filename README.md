@@ -18,9 +18,52 @@ Realizamos otimizações nas tabelas perfil e servicos, proporcionando um ambien
 
 ### Tabela perfil
 A tabela perfil é projetada para conter informações essenciais do cadastro de usuários
+```
+CREATE TABLE `perfil` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`avaliacoes` VARCHAR(500) NOT NULL DEFAULT '0' COLLATE 'utf8mb4_general_ci',
+	`areas_interesse` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`ft_perfil` VARCHAR(500) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`habilidades` VARCHAR(500) NOT NULL DEFAULT '' COLLATE 'utf8mb4_general_ci',
+	`nome` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+	`sexo` ENUM('M','F') NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`idade` INT(3) NOT NULL,
+	`cpf` VARCHAR(11) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+	`email` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_general_ci',
+	PRIMARY KEY (`id`) USING BTREE
+)
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=3
+;
+```
 
 ### Tabela servicos
 A tabela servicos é destinada a armazenar informações adicionais sobre os serviços prestados
+```
+CREATE TABLE `servicos` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `area` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `desc_serv` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `cidade` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `bairro` VARCHAR(500) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `tempo_ex` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `cpf` VARCHAR(11) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `whatsapp` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `instagram` VARCHAR(300) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `facebook` VARCHAR(300) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    `linkedin` VARCHAR(300) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci',
+    PRIMARY KEY (`id`)
+)
+AUTO_INCREMENT=1
+COLLATE='utf8mb4_general_ci'
+ENGINE=InnoDB;
+
+ALTER TABLE servicos
+MODIFY COLUMN linkedin VARCHAR(300) NULL DEFAULT NULL COLLATE 'utf8mb4_general_ci';
+
+```
+
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
